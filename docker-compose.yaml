@@ -157,10 +157,10 @@ services:
       start_period: 30s
     restart: always
 
-  airflow-webserver:
+  airflow-apiserver:
     <<: *airflow-common
-    command: webserver
-    container_name: airflow-webserver
+    command: api-server
+    container_name: airflow-apiserver
     ports:
       - "8080:8080"
     healthcheck:
